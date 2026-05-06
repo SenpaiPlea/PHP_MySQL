@@ -1,0 +1,85 @@
+Project Specifications and Requirements
+
+You are to create a form and display a records page that looks like the video (you must use Bootstrap).
+
+You are to create two tables. One will be named contacts that contain the contact information. The other will be named admins that contain admin information. NOTE: the admin table will hold both the admins and the staff.
+
+The contacts table will have the following fields:
+
+    id
+    fname
+    lname
+    address
+    city
+    state
+    phone
+    email
+    dob
+    contacts
+    age
+
+The admins table will have the following fields:
+
+    id
+    name
+    email
+    password (must be hashed)
+    status
+
+You will need to evaluate certain regex patterns on the fields as shown. Do your best with these; I am not looking for every possible combination but just do what I listed below.
+
+NOTE: You cannot use HTML required or the date attributes you must use your backend validation class to check things
+
+First and Last Name – alpha characters (upper and lower case), hyphens, apostrophes, spaces only (cannot be blank).
+
+Address – start with a number, then alpha characters, and spaces (cannot be blank).
+
+City – Must be alpha characters only (cannot be blank).
+
+Phone – Must be in the format 999.999.9999, where 9 is a digit of 0 to 9 (cannot be blank).
+
+Email address – Valid email address (cannot be blank).
+
+DOB – Must have this format mm/dd/yyyy (cannot be blank). 
+
+Password – will take letters, numbers, and special characters (cannot be blank).
+
+In addition, for the add contact form, you will create one select drop-down box that will contain 5 states. It must be sticky as well so if the user selects a state and there is an error on the form that selection will remain. Also, for the add contact form, you will create three checkboxes and four radio buttons. If a radio button is not selected, then after the submit button is clicked a message will appear displaying the following text “You must select an age range”.
+
+Feel free to look the regular expressions up on the Internet, you do not have to write them from scratch or use AI to create them.
+
+The status filed in the add admin page will be a dropdown with two options (staff and admin).
+
+The router.php page will control all the routing for bringing in the content of the other pages. You will pass the page name through the URL as shown in the example.
+
+You will only have the files I have shown in the screenshot to the right, and they will do their assigned functions per the example in the book. Notice there is a SQL folder with two SQL files. Those are the SQL files you used to create your database tables. You do not have to include that folder.
+
+You must use the classes Db_conn.php, Pdo_methods.php, StickyForm.php, Validation.php as the are written per the book, you cannot re-write or add to them, with the exception of the Validation class for the regular expressions and the Db_conn.php class for adding your database password.
+
+Your link will always go to the index.php page but the parameter will determine what page is loaded, below is an example.file structure
+
+russet-v8.wccnet.edu/~your username/path to your indexpage/index.php?page=addContact
+
+The following parameters will be used for each page exactly as written. This is taken from the index.php page perspective.
+
+Index.php?page=login (login page)
+Index.php?page=welcome (welcome page)
+Index.php?page=addContact (add contact page)
+Index.php?page=deleteContacts (delete contacts page)
+Index.php?page=addAdmin (add admin page)
+Index.php?page=deleteAdmins (delete admins page)
+
+Your application must do the following:
+
+    Update the Validation Class (adding regular expressions) for all the form fields so the custom error messages appear if needed.
+    If the person tries to enter the URL to a page, they do not have access to then they will be redirected to the login page. For example, a user with the status of staff cannot enter addAdmin to the URL and get into the addAdmin page. Or a user cannot bypass the login by entering the URL. You can accomplish this using sessions.
+    If the user enters a URL to just the index page (without the parameter) or to the wrong parameter, the user will be redirected to the login page.
+    The URL parameters must be written as shown above and go to the correct pages.
+    You must use the files and folders I show in the picture to the right no extras and no omissions, no renaming. Those files must do what they indicate.
+    When adding admins, you will check for duplicate emails before the application adds the admin. No two admins can have the same email. For this project, contacts can have the same email address when created, but in the real world, that would not be the case.
+    Write all the code for the required pages. Please see my examples on GitHub as a start. You must use the Db_conn, Pdo_methods, StickyForm, and Validation classes I have explained and provided in this course and you cannot modify them except for the validation. 
+    You must create at least two test admin accounts. One will be yourwccusername@admin.com, and the other will be yourwccusername@staff.com. The admin.com will have the admin status and the staff.com will have the staff status. Both of these accounts will have the password of “password”, which must be hashed. 
+    On the "Add Contacts" and "Add Admins" forms. Upon successful completion, all form fields, checkboxes, and radio buttons will be cleared.
+    No JavaScript will be used in this project that includes adding JavaScript files to your project even if they are not used.
+    You must provide a username and password for me to log into your site, if I choose to.  If I cannot access your site you will get a zero for the project.
+    IMPORTANT NOTE: All pages of this application must work completely. The URLs must work as specified. You are to have no errors, warnings, notices, or any other text that is not supposed to appear on the page. File and folder structure must be exactly as shown in the screenshot. The application must work like the solution shown in the video. It also must look (within reason) like the video and screenshots. You must do exactly what the specifications state.

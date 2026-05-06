@@ -1,0 +1,9 @@
+What architectural pattern does this project use? What are the benefits of separating routes, views, and controllers?
+
+How does the application enforce different permissions for staff vs. admin users? What happens if a staff user tries to access an admin-only page?
+
+How does the navigation menu change based on user role? Why is this important for user experience?
+
+How does the routing system work? What happens when a user requests a page that doesn't exist?
+
+How does the application handle database errors? What user-facing messages are shown when operations fail? 

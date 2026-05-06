@@ -1,0 +1,23 @@
+Workflow
+
+When the application first loads the user will be taken to a login page where they will log in with their email and password (the user must already have an account). The user will already have a status assigned to them as staff or admin. If they are staff, then they can only add and delete contacts. If they are an admin they can also add and delete other admins.
+
+When the users successfully log in they will be taken to a welcome page that will state "Welcome along with their name", they will also see links to the pages they can access.
+
+Users with the status of staff will only see the following links: Add Contact, Delete Contact(s) and Logout
+
+Users with the status of admin will see all the links: Add Contact, Delete Contact(s), Add Admin, Delete Admin(s), and Logout
+
+If they select the "Add Contact" link they will be taken to a form where they can add a contact. When they click the submit button each text field will be validated. The validation will check for proper formatting and if the field is blank (no fields can be blank).
+
+If a form field value is valid then no error message will be shown. The information will be placed into the database table and an acknowledgment will display stating “Contact Information Added” and the form will be cleared.
+
+If a form field value is not valid then an error message will be shown below the field entry box stating the problem. If there is an error for any of the form fields, all the form field entries must be preserved.
+
+Also, for the checkboxes, dropdown select box, and radio buttons their state (checked/selected or not checked/not selected) will be preserved. If the user does not select an age range, they will get a message stating that they must select an age range. The checkboxes are optional and can be checked or not. If there is a problem with adding the record but all form field validation is done, then a message will display, " There was an error adding the record".
+
+If the user clicks the link "Delete contact(s)" they will be taken to a page that will display all the records in the database table. If there are no records in the database table, then a message will appear stating "There are no records to display".
+
+The records will be displayed in a table format. There will be a checkbox at the end of each row. If the user checks one or more checkboxes and clicks the delete button, all the records checked will be deleted and a message will display reading "Contact(s) deleted".
+
+If the application is not able to delete the records then a message will be displayed "Could not delete the contacts". If the user does not check the checkboxes but clicks the delete button the page will reload but nothing will be deleted. If they click the logout link, they will be taken to the index page where the login form is. The session and cookie will be destroyed. If the user has admin status, then they will be given two more page links as noted above. Both those pages will work just as the contacts pages but with different fields as shown in the video.
