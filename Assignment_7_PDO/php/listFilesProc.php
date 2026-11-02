@@ -4,7 +4,7 @@ require_once '../classes/Pdo_methods.php';
 
 $output = "";
 
-$sql = "SELECT fileName, filePath FROM FILES ORDER BY id DESC";
+$sql = "SELECT fileName, filePath FROM files ORDER BY fileID DESC";
 
 $db   = new PdoMethods();
 $rows = $db->selectNotBinded($sql);

@@ -5,10 +5,10 @@ class Db_conn {
     /* THIS CLASS CONNECTS TO THE DATABASE ONLY AND SETS UP THE ATTRIBUTE PARAMETERS */
     public function dbOpen(){
         try {
-            $dbHost = 'localhost';
+            $dbHost = '127.0.0.1';
             $dbName = 'sealfleming';
             $dbUsr = 'sealfleming';
-            $dbPass = '19FBMDiDuaLcBnT';
+            $dbPass = 'ZsZktEwIGgCtOG6';
 
             // Establishing the PDO connection
             $this->conn = new PDO('mysql:host=' . $dbHost . ';dbname=' . $dbName, $dbUsr, $dbPass);
